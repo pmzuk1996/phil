@@ -1,0 +1,9 @@
+perl -p -i -e 's/Ia/ZZ/g' *
+
+Recursive:
+perl -p -i -e 's/Ia/ZZ/g' `grep -ril Ia *`
+perl -p -i -e 's/\/zzz/\/qqq/g' `grep -ril \/zzz *`
+perl -p -i -e 's\/home\/precam/\/home\/precam2/g' `grep -ril \/home\/precam *`
+perl -p -i -e 's/precam/precam2/g' `grep -ril precam *`
+
+(skip the -i if you wish to print to the screen)
